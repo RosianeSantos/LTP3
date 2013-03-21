@@ -4,6 +4,7 @@
  */
 package br.edu.ifnmg.tads.ltp3;
 
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -13,6 +14,33 @@ import java.util.Objects;
 public class Pessoa {
     private int id;
     private String nome;
+    private List<Email> emails;
+    private List<Endereco> enderecos;
+    private List<Telefone> telefones;
+
+    public List<Email> getEmails() {
+        return emails;
+    }
+
+    public void setEmails(List<Email> emails) {
+        this.emails = emails;
+    }
+
+    public List<Endereco> getEnderecos() {
+        return enderecos;
+    }
+
+    public void setEnderecos(List<Endereco> enderecos) {
+        this.enderecos = enderecos;
+    }
+
+    public List<Telefone> getTelefones() {
+        return telefones;
+    }
+
+    public void setTelefones(List<Telefone> telefones) {
+        this.telefones = telefones;
+    }
 
     public int getId() {
         return id;
@@ -65,4 +93,17 @@ public class Pessoa {
     public String toString() {
         return "Pessoa{" + "id=" + id + ", nome=" + nome + '}';
     }
+    
+    public void addEmail(Email obj){
+            if(!emails.contains(obj)){
+                emails.add(obj);
+    }
+    }
+    
+    public void removeEmail(Email obj){
+        if(emails.contains(obj)){
+            emails.remove(obj);
+        }
+    }
+    
 }
