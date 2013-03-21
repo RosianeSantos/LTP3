@@ -12,6 +12,7 @@ import java.util.Objects;
  */
 public class Email {
     private int Idemail;
+    private string Email;
 
     public int getIdemail() {
         return Idemail;
@@ -21,17 +22,16 @@ public class Email {
         this.Idemail = Idemail;
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + this.Idemail;
-        hash = 89 * hash + Objects.hashCode(this.Nome);
-        return hash;
+    public string getEmail() {
+        return Email;
     }
 
     @Override
-    public String toString() {
-        return "Email{" + "Idemail=" + Idemail + ", Nome=" + Nome + '}';
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.Idemail;
+        hash = 71 * hash + Objects.hashCode(this.Email);
+        return hash;
     }
 
     @Override
@@ -46,19 +46,19 @@ public class Email {
         if (this.Idemail != other.Idemail) {
             return false;
         }
-        if (!Objects.equals(this.Nome, other.Nome)) {
+        if (!Objects.equals(this.Email, other.Email)) {
             return false;
         }
         return true;
     }
 
-    public String getNome() {
-        return Nome;
+    @Override
+    public String toString() {
+        return "Email{" + "Idemail=" + Idemail + ", Email=" + Email + '}';
     }
 
-    public void setNome(String Nome) {
-        this.Nome = Nome;
+    public void setEmail(string Email) {
+        this.Email = Email;
     }
-    private String Nome;
     
 }
