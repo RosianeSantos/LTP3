@@ -12,7 +12,7 @@ import java.util.Objects;
  */
 public class Email {
     private int Idemail;
-    private string Email;
+    private String Email;
 
     public int getIdemail() {
         return Idemail;
@@ -22,7 +22,7 @@ public class Email {
         this.Idemail = Idemail;
     }
 
-    public string getEmail() {
+    public String getEmail() {
         return Email;
     }
 
@@ -57,7 +57,7 @@ public class Email {
         return "Email{" + "Idemail=" + Idemail + ", Email=" + Email + '}';
     }
 
-    public void setEmail(string Email) {
+    public void setEmail(String Email) {
         this.Email = Email;
     }
     
