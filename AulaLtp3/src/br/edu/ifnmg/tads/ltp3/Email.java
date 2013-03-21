@@ -13,6 +13,7 @@ import java.util.Objects;
 public class Email {
     private int Idemail;
     private String Email;
+   
 
     public int getIdemail() {
         return Idemail;
